@@ -36,7 +36,7 @@ public class WeatherService
         {
             BaseAddress = new Uri("https://api.open-meteo.com/")
         };
-        // client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "mcp-weather-sample/1.0 (+https://example.com; contact=ops@example.com)");
+        client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "mcp-weather-sample/1.0 (+https://example.com; contact=ops@example.com)");
         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         return client;
     }
@@ -47,6 +47,7 @@ public class WeatherService
         {
             BaseAddress = new Uri("https://geocoding-api.open-meteo.com/")
         };
+        client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "mcp-weather-sample/1.0 (+https://example.com; contact=ops@example.com)");
         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         return client;
     }
